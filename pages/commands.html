@@ -1,0 +1,1723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/commands.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="shortcut icon" href="../img/" type="image/x-icon">
+    <title>MecHaNiC | Discord Bot</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <div class="navbar navbar-expand-md bg-dark navbar-dark">
+        <div class="container">
+            <a href="../index.html" class="navbar-brand text-info"> <img src="../res/logo2.png", width="30", height="30", class="logo">  MecHaNiC</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainmenu"><span
+                    class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse" id="mainmenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="navbar-nav nav-item"><a href="../index.html" class="btn btn-outline-info me-2">Home</a></li>
+                    <li class="navbar-nav nav-item"><a href="/pages/team.html" class="btn btn-outline-info me-2">Team</a></li>
+                    <li class="navbar-nav nav-item"><a href="#Stats" class="btn btn-outline-info me-2">Stats</a></li>
+                    <li class="navbar-nav nav-item"><a href="#Features" class="btn btn-outline-info me-2">Features</a></li>
+                    <li class="navbar-nav nav-item"><a href="#FAQ" class="btn btn-outline-info me-2">Ask me</a></li>
+                    <li class="navbar-nav nav-item dropdown">
+                        <a class="btn btn-outline-info dropdown-toggle" href="#" id="linksdrop" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Links</a>
+                        <ul class="dropdown-menu bg-dark" aria-labelledby="linksdrop">
+                            <li><a class="dropdown-item text-muted" href="https://discord.com/api/oauth2/authorize?client_id=826891395762618419&permissions=1633697656311&scope=bot">Invite</a></li>
+                            <li><a class="dropdown-item text-muted" href="https://github.com/ecrpgbot1/MecHaNiC">Github</a></li>
+                            <li><a class="dropdown-item text-muted" href="https://discord.gg/tvGxAPJbYG">Support Server</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <section style="margin-top: 9%;">
+            <div class="row">
+                <div class="col-sm-6 my-1">
+                    <h2 class="fw-bold">MecHaNiC Commands</h2>
+                    <p class="command-descreption">Find all MecHaNiC bot commands and information you need fast and easy</p>
+                </div>
+                
+            </div>
+            <hr>
+        </section>
+        <div class="mt-4"></div>
+        <div class="row">
+            <div class="col-md-4 my-2">
+                <div class="card p-3">
+                    <h5>Select Commands Category</h5>
+                    <hr />
+                    <button onclick="active(this)" id="CategoryBtnAll" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class="fad fa-icons ttt"></i>&nbsp; All Commands</button>
+                    
+                        <button onclick="active(this)" id="CategoryBtn0" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-gift ttt'></i>&nbsp; Bot Information Commands</button>
+                    
+                        <button onclick="active(this)" id="CategoryBtn1" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-globe-europe ttt'></i>&nbsp; Bot Setup Commands</button>
+                    
+                        <button onclick="active(this)" id="CategoryBtn2" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-hammer-war ttt'></i>&nbsp;&nbsp; SAMP Commands</button>
+                    
+                        <button onclick="active(this)" id="CategoryBtn3" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fas fa-crown ttt'></i>&nbsp;&nbsp; Auction Commands</button>
+
+                        <button onclick="active(this)" id="CategoryBtn4" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fas fa-abc ttt'></i>&nbsp;&nbsp; Moderation Commands</button>
+
+                        <button onclick="active(this)" id="CategoryBtn5" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fas fa-def ttt'></i>&nbsp;&nbsp; Administrator Commands</button>
+
+                        <button onclick="active(this)" id="CategoryBtn6" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fas fa-ghi ttt'></i>&nbsp;&nbsp; Giveaway Commands</button>
+
+                        <button onclick="active(this)" id="CategoryBtn7" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fas fa-jkl ttt'></i>&nbsp;&nbsp; Covid Commands</button>
+
+                        <button onclick="active(this)" id="CategoryBtn8" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fas fa-mno ttt'></i>&nbsp;&nbsp; Guild Commands</button>
+
+                        <button onclick="active(this)" id="CategoryBtn9" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fas fa-pqr ttt'></i>&nbsp;&nbsp; Fun Commands</button>
+
+                        <button onclick="active(this)" id="CategoryBtn10" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fas fa-crown ttt'></i>&nbsp;&nbsp; User Commands</button>
+
+                        <button onclick="active(this)" id="CategoryBtn11" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fas fa-crown ttt'></i>&nbsp;&nbsp; Events Commands</button>
+
+                        <button onclick="active(this)" id="CategoryBtn12" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fas fa-crown ttt'></i>&nbsp;&nbsp; Music Commands</button>
+
+                        <button onclick="active(this)" id="CategoryBtn13" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fas fa-crown ttt'></i>&nbsp;&nbsp; Logger Commands</button>
+
+                        <button onclick="active(this)" id="CategoryBtn14" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fas fa-crown ttt'></i>&nbsp;&nbsp; Welcomer Commands</button>
+
+                        <button onclick="active(this)" id="CategoryBtn15" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fas fa-crown ttt'></i>&nbsp;&nbsp; Youtube Commands</button>
+                    
+                </div>
+            </div>
+            <div class="col-md-8 my-2">
+                <input type="text" class="w-100 search-box" oninput="search(this.value)" placeholder="Search for commands" />
+                
+                    
+                        <div class="mt-4"></div>
+
+                    <!--bot-->
+                    <div class="commands-section" id="Category0">
+                        
+                            <div class="accordion accordion-flush mt-2" id="botinfo">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fbotinfo">
+                                             .botinfo&nbsp; <span class="command-descreption">- Shows the Bot's stats and information.</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fbotinfo" class="accordion-collapse collapse" data-bs-parent="#botinfo">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    .botinfo<br>
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            
+                            <div class="accordion accordion-flush mt-2" id="support">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fsupport">
+                                             .support&nbsp; <span class="command-descreption">- Get a link for Bot's support server</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fsupport" class="accordion-collapse collapse" data-bs-parent="#support">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    .support
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            
+                            <div class="accordion accordion-flush mt-2" id="website">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fwebsite">
+                                             .website&nbsp; <span class="command-descreption">- Get a link to the Bot's website</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fwebsite" class="accordion-collapse collapse" data-bs-parent="#website">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    .website
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion accordion-flush mt-2" id="botguilds">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fbotguilds">
+                                             .botguilds&nbsp; <span class="command-descreption">- List of all the Discord servers I am in.</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fbotguilds" class="accordion-collapse collapse" data-bs-parent="#botguilds">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    .botguilds
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion accordion-flush mt-2" id="commandaliases">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fcommandaliases">
+                                             .commandaliases&nbsp; <span class="command-descreption">- Lists Bot Commands and their aliases</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fcommandaliases" class="accordion-collapse collapse" data-bs-parent="#commandaliases">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    .commandaliases
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion accordion-flush mt-2" id="totalcommands">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#ftotalcommands">
+                                             .totalcommands&nbsp; <span class="command-descreption">- get a count of Total number of commands that the bot has.</span>
+                                        </button>
+                                    </h2>
+                                    <div id="ftotalcommands" class="accordion-collapse collapse" data-bs-parent="#totalcommands">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    .totalcommands
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                    </div>
+                
+                    <!--setup-->
+                    <div class="commands-section" id="Category1">
+                    
+                            <div class="accordion accordion-flush mt-2" id="setchannel">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fsetchannel">
+                                            .setchannel&nbsp; <span class="command-descreption">- Set a channel for something. Use the commands in the channel you want to set.<br></br>
+                                                *PERM NEEDED = MANAGE_GUILD*</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fsetchannel" class="accordion-collapse collapse" data-bs-parent="#setchannel">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    .setchannel option<br>Options are welcome, logs, application, embedchannel, youtube, reports.
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            
+                            <div class="accordion accordion-flush mt-2" id="removechannel">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fremovechannel">
+                                             .removechannel&nbsp; <span class="command-descreption">- Remove a channel.<br></br> *PERM NEEDED = MANAGE_GUILD*</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fremovechannel" class="accordion-collapse collapse" data-bs-parent="#removechannel">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    .removechannel option
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            
+                            <div class="accordion accordion-flush mt-2" id="mychannels">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fmychannels">
+                                             .mychannels&nbsp; <span class="command-descreption">- Check your channels<br></br>  *PERM NEEDED = MANAGE_GUILD*</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fmychannels" class="accordion-collapse collapse" data-bs-parent="#mychannels">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    .mychannels
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            <div class="accordion accordion-flush mt-2" id="guildtogglecategory">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fguildtogglecategory">
+                                             .guildtogglecategory&nbsp; <span class="command-descreption">- Enable/Disable a category and its commands in your guild.<br></br>  *PERM NEEDED = MANAGE_GUILD*</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fguildtogglecategory" class="accordion-collapse collapse" data-bs-parent="#guildtogglecategory">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    .guildtogglecategory option category
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    </div>
+ 
+                    </div>
+
+                    <!--samp-->
+                    <div class="commands-section" id="Category2">
+                        
+                            
+                        <div class="accordion accordion-flush mt-2" id="addserver">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faddserver">
+                                         .addserver&nbsp; <span class="command-descreption">- Add a server to the list. This will overwrite if there are servers with same name.<br></br>*PERM_NEEDED = MANAGE_MESSAGES* </span>
+                                    </button>
+                                </h2>
+                                <div id="faddserver" class="accordion-collapse collapse" data-bs-parent="#addserver">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                .addserver address port<br></br>.addserver 192.186.244.3 7777<br></br>.addserver serveraddress 7777
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion accordion-flush mt-2" id="removeserver">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fremoveserver">
+                                         .removeserver&nbsp; <span class="command-descreption">- Remove a server from the list.<br></br>*PERM_NEEDED = MANAGE_MESSAGES* </span>
+                                    </button>
+                                </h2>
+                                <div id="fremoveserver" class="accordion-collapse collapse" data-bs-parent="#removeserver">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                .removeserver address port<br></br>.removeserver 192.186.244.3 7777<br></br>.aremoveserver serveraddress 7777
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion accordion-flush mt-2" id="notificationsettings">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fnotificationsettings">
+                                         .notificationsettings&nbsp; <span class="command-descreption">- Set settings for time-based notifications on SA-MP servers.<br></br> *PERM_NEEDED = MANAGE_MESSAGES* </span>
+                                    </button>
+                                </h2>
+                                <div id="fnotificationsettings" class="accordion-collapse collapse" data-bs-parent="#notificationsettings">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                            .notificationsettings index option time channel role notifName<br></br>.index- the no. against the server in .listserver<br></br>option- add/remove<br></br>time- ingame time like 04:00<br></br>channel- mention the channel you want the notification to be in<br></br>role - the role you want to use that pings when the notification hits<br></br>notifName- whatever you want the notification to say
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion accordion-flush mt-2" id="">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f">
+                                         .listplayers&nbsp; <span class="command-descreption">- Add a server to the list. This will overwrite if there are servers with same name.<br></br>*PERM_NEEDED = MANAGE_MESSAGES* </span>
+                                    </button>
+                                </h2>
+                                <div id="f" class="accordion-collapse collapse" data-bs-parent="#">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                .addserver address page<br></br>.addserver 192.186.244.3 7777<br></br>.addserver serveraddress 7777
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion accordion-flush mt-2" id="">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f">
+                                         .sampserverinfo&nbsp; <span class="command-descreption">- Add a server to the list. This will overwrite if there are servers with same name.<br></br>*PERM_NEEDED = MANAGE_MESSAGES* </span>
+                                    </button>
+                                </h2>
+                                <div id="f" class="accordion-collapse collapse" data-bs-parent="#">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                .addserver address page<br></br>.addserver 192.186.244.3 7777<br></br>.addserver serveraddress 7777
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion accordion-flush mt-2" id="">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f">
+                                         .server&nbsp; <span class="command-descreption">- Add a server to the list. This will overwrite if there are servers with same name.<br></br>*PERM_NEEDED = MANAGE_MESSAGES* </span>
+                                    </button>
+                                </h2>
+                                <div id="f" class="accordion-collapse collapse" data-bs-parent="#">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                .addserver address page<br></br>.addserver 192.186.244.3 7777<br></br>.addserver serveraddress 7777
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion accordion-flush mt-2" id="">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f">
+                                         .listserver&nbsp; <span class="command-descreption">- Add a server to the list. This will overwrite if there are servers with same name.<br></br>*PERM_NEEDED = MANAGE_MESSAGES* </span>
+                                    </button>
+                                </h2>
+                                <div id="f" class="accordion-collapse collapse" data-bs-parent="#">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                .addserver address page<br></br>.addserver 192.186.244.3 7777<br></br>.addserver serveraddress 7777
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion accordion-flush mt-2" id="">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f">
+                                         .banktimestats&nbsp; <span class="command-descreption">- Add a server to the list. This will overwrite if there are servers with same name.<br></br>*PERM_NEEDED = MANAGE_MESSAGES* </span>
+                                    </button>
+                                </h2>
+                                <div id="f" class="accordion-collapse collapse" data-bs-parent="#">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                .addserver address page<br></br>.addserver 192.186.244.3 7777<br></br>.addserver serveraddress 7777
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+            
+                    <!--auctions-->
+                    <div class="commands-section" id="Category3">
+                    
+                        
+                        <div class="accordion accordion-flush mt-2" id="startauction">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fstartauction">
+                                        <span class='badge badge-vip rounded-pill'><i class='far fa-crown'></i></span>&nbsp; .startauction&nbsp; <span class="command-descreption">- Start the setup process for an auction</span>
+                                    </button>
+                                </h2>
+                                <div id="fstartauction" class="accordion-collapse collapse" data-bs-parent="#startauction">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                                .startauction
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="accordion accordion-flush mt-2" id="bid">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fbid">
+                                        <span class='badge badge-vip rounded-pill'><i class='far fa-crown'></i></span>&nbsp; .bid&nbsp; <span class="command-descreption">Place your bids.</span>
+                                    </button>
+                                </h2>
+                                <div id="fbid" class="accordion-collapse collapse" data-bs-parent="#bid">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                            .bid auctionid amount
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion accordion-flush mt-2" id="activeauctions">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#factiveauctions">
+                                        <span class='badge badge-vip rounded-pill'><i class='far fa-crown'></i></span>&nbsp; .activeauctions&nbsp; <span class="command-descreption">Place your bids.</span>
+                                    </button>
+                                </h2>
+                                <div id="factiveauctions" class="accordion-collapse collapse" data-bs-parent="#activeauctions">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                            .activeauctions auctionid amount
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion accordion-flush mt-2" id="auctionrules">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fauctionrules">
+                                        <span class='badge badge-vip rounded-pill'><i class='far fa-crown'></i></span>&nbsp; .auctionrules&nbsp; <span class="command-descreption">Rules and info on how the auction works.</span>
+                                    </button>
+                                </h2>
+                                <div id="fauctionrules" class="accordion-collapse collapse" data-bs-parent="#auctionrules">
+                                    <div class="accordion-body">
+                                        <span>Usage Examples:</span> <br />
+                                        <span class="examples">
+                                            
+                                            .auctionrules
+                                            
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                    <!--moderation-->
+                    <div class="commands-section" id="Category4">
+                    
+                        
+                    <div class="accordion accordion-flush mt-2" id="ban">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fban">
+                                     .ban&nbsp; <span class="command-descreption">- ban a member<br>*PERM_NEEDED = BAN_MEMBERS*</span>
+                                </button>
+                            </h2>
+                            <div id="fban" class="accordion-collapse collapse" data-bs-parent="#ban">
+                                <div class="accordion-body">
+                                    <span>Usage Examples:</span> <br />
+                                    <span class="examples">
+                                        
+                                            .ban @member reason(optional)<br>
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion accordion-flush mt-2" id="unban">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#funban">
+                                     .unban&nbsp; <span class="command-descreption">- Unban a member<br>*PERM_NEEDED = BAN_MEMBERS*</span>
+                                </button>
+                            </h2>
+                            <div id="funban" class="accordion-collapse collapse" data-bs-parent="#unban">
+                                <div class="accordion-body">
+                                    <span>Usage Examples:</span> <br />
+                                    <span class="examples">
+                                        
+                                            .unban @member<br>.unban membername
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="accordion accordion-flush mt-2" id="kick">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fkick">
+                                     .kick&nbsp; <span class="command-descreption">- kick a member<br>*PERM_NEEDED = KICK_MEMBERS*</span>
+                                </button>
+                            </h2>
+                            <div id="fkick" class="accordion-collapse collapse" data-bs-parent="#kick">
+                                <div class="accordion-body">
+                                    <span>Usage Examples:</span> <br />
+                                    <span class="examples">
+                                        
+                                            .kick @member reason(optional)
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="accordion accordion-flush mt-2" id="mute">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fmute">
+                                     .mute&nbsp; <span class="command-descreption">- mute a member<br>*PERM_NEEDED = MANAGE_MESSAGES*</span>
+                                </button>
+                            </h2>
+                            <div id="fmute" class="accordion-collapse collapse" data-bs-parent="#mute">
+                                <div class="accordion-body">
+                                    <span>Usage Examples:</span> <br />
+                                    <span class="examples">
+                                        
+                                            .mute @member reason(optional)
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion accordion-flush mt-2" id="tempmute">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#ftempmute">
+                                     .tempmute&nbsp; <span class="command-descreption">- Mute a member for a specified time<br>*PERM_NEEDED =MANAGE_MESSAGES*</span>
+                                </button>
+                            </h2>
+                            <div id="ftempmute" class="accordion-collapse collapse" data-bs-parent="#tempmute">
+                                <div class="accordion-body">
+                                    <span>Usage Examples:</span> <br />
+                                    <span class="examples">
+                                        
+                                            .tempmute @member time<br>.tempmute @member 10s (for seconds)<br>.tempmute @member 10m (for minutes)<br>.tempmute @member 10h (for hours)<br>.tempmute @member 10d (for days)<br>
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion accordion-flush mt-2" id="unmute">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#funmute">
+                                     .unmute&nbsp; <span class="command-descreption">- Unmute a member<br>*PERM_NEEDED = MANAGE_MESSAGES*</span>
+                                </button>
+                            </h2>
+                            <div id="funmute" class="accordion-collapse collapse" data-bs-parent="#unmute">
+                                <div class="accordion-body">
+                                    <span>Usage Examples:</span> <br />
+                                    <span class="examples">
+                                        
+                                            .unmute @member<br>.unmute membername
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion accordion-flush mt-2" id="purge">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fpurge">
+                                     .purge&nbsp; <span class="command-descreption">- delete a set of messages in a channel<br>*PERM_NEEDED = MANAGE_MESSAGES*</span>
+                                </button>
+                            </h2>
+                            <div id="fpurge" class="accordion-collapse collapse" data-bs-parent="#purge">
+                                <div class="accordion-body">
+                                    <span>Usage Examples:</span> <br />
+                                    <span class="examples">
+                                        
+                                            .purge number<br>.purge 10
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                
+                    <!--admin-->
+                    <div class="commands-section" id="Category5">
+                
+                    
+                    <div class="accordion accordion-flush mt-2" id="say">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fsay">
+                                     .say&nbsp; <span class="command-descreption">- Make the bot say something</span>
+                                </button>
+                            </h2>
+                            <div id="fsay" class="accordion-collapse collapse" data-bs-parent="#say">
+                                <div class="accordion-body">
+                                    <span>Usage Examples:</span> <br />
+                                    <span class="examples">
+                                        
+                                            .say message                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="accordion accordion-flush mt-2" id="setname">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fsetname">
+                                     .setname&nbsp; <span class="command-descreption">- Change someone's Nickname</span>
+                                </button>
+                            </h2>
+                            <div id="fsetname" class="accordion-collapse collapse" data-bs-parent="#setname">
+                                <div class="accordion-body">
+                                    <span>Usage Examples:</span> <br />
+                                    <span class="examples">
+                                        
+                                        .setname @member newname
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    
+                    <div class="accordion accordion-flush mt-2" id="dm">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fdm">
+                                     .dm&nbsp; <span class="command-descreption">Send a direct message</span>
+                                </button>
+                            </h2>
+                            <div id="fdm" class="accordion-collapse collapse" data-bs-parent="#dm">
+                                <div class="accordion-body">
+                                    <span>Usage Examples:</span> <br />
+                                    <span class="examples">
+                                        
+                                            .dm @user message
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion accordion-flush mt-2" id="deletemessage">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fdeletemessage">
+                                     .deletemessage&nbsp; <span class="command-descreption">Delete a Bot's message</span>
+                                </button>
+                            </h2>
+                            <div id="fdeletemessage" class="accordion-collapse collapse" data-bs-parent="#deletemessage">
+                                <div class="accordion-body">
+                                    <span>Usage Examples:</span> <br />
+                                    <span class="examples">
+                                        
+                                            .deletemessage #channel/channelid messageid
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion accordion-flush mt-2" id="limit">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#flimit">
+                                     .limit&nbsp; <span class="command-descreption">imit a command usage to a specific channel(s)</span>
+                                </button>
+                            </h2>
+                            <div id="flimit" class="accordion-collapse collapse" data-bs-parent="#limit">
+                                <div class="accordion-body">
+                                    <span>Usage Examples:</span> <br />
+                                    <span class="examples">
+                                        
+                                            .limit option categoryname commandname<br>.limit add samp addserver<br>.limit remove samp addserver
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion accordion-flush mt-2" id="perms">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fperms">
+                                     .perms&nbsp; <span class="command-descreption">Get permissions list of a user or a role in your guild</span>
+                                </button>
+                            </h2>
+                            <div id="fperms" class="accordion-collapse collapse" data-bs-parent="#perms">
+                                <div class="accordion-body">
+                                    <span>Usage Examples:</span> <br />
+                                    <span class="examples">
+                                        
+                                            .perms @user/@role
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion accordion-flush mt-2" id="emojiadd">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#femojiadd">
+                                     .emojiadd&nbsp; <span class="command-descreption">Adds an emoji in the server</span>
+                                </button>
+                            </h2>
+                            <div id="femojiadd" class="accordion-collapse collapse" data-bs-parent="#emojiadd">
+                                <div class="accordion-body">
+                                    <span>Usage Examples:</span> <br />
+                                    <span class="examples">
+                                        
+                                            .emojiadd name url
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion accordion-flush mt-2" id="emojiremove">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#femojiremove">
+                                     .emojiremove&nbsp; <span class="command-descreption">Removes an emoji from the server</span>
+                                </button>
+                            </h2>
+                            <div id="femojiremove" class="accordion-collapse collapse" data-bs-parent="#emojiremove">
+                                <div class="accordion-body">
+                                    <span>Usage Examples:</span> <br />
+                                    <span class="examples">
+                                        
+                                            .emojiremove emoji
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion accordion-flush mt-2" id="createrole">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fcreaterole">
+                                     .createrole&nbsp; <span class="command-descreption">Creates a role</span>
+                                </button>
+                            </h2>
+                            <div id="fcreaterole" class="accordion-collapse collapse" data-bs-parent="#createrole">
+                                <div class="accordion-body">
+                                    <span>Usage Examples:</span> <br />
+                                    <span class="examples">
+                                        
+                                            .createrole rolename
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion accordion-flush mt-2" id="deleterole">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fdeleterole">
+                                     .createrole&nbsp; <span class="command-descreption">Deletes a role</span>
+                                </button>
+                            </h2>
+                            <div id="fdeleterole" class="accordion-collapse collapse" data-bs-parent="#deleterole">
+                                <div class="accordion-body">
+                                    <span>Usage Examples:</span> <br />
+                                    <span class="examples">
+                                        
+                                            .deleterole @role
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion accordion-flush mt-2" id="giverole">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fgiverole">
+                                     .giverole&nbsp; <span class="command-descreption">Gives a role to a member</span>
+                                </button>
+                            </h2>
+                            <div id="fgiverole" class="accordion-collapse collapse" data-bs-parent="#giverole">
+                                <div class="accordion-body">
+                                    <span>Usage Examples:</span> <br />
+                                    <span class="examples">
+                                        
+                                            .giverole @user @role
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion accordion-flush mt-2" id="removerole">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fremoverole">
+                                     .removerole&nbsp; <span class="command-descreption">Removes a role from a user</span>
+                                </button>
+                            </h2>
+                            <div id="fremoverole" class="accordion-collapse collapse" data-bs-parent="#removerole">
+                                <div class="accordion-body">
+                                    <span>Usage Examples:</span> <br />
+                                    <span class="examples">
+                                        
+                                            .removerole @user @role
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion accordion-flush mt-2" id="poll">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fpoll">
+                                     .poll&nbsp; <span class="command-descreption">Create a poll using reactions.</span>
+                                </button>
+                            </h2>
+                            <div id="fpoll" class="accordion-collapse collapse" data-bs-parent="#poll">
+                                <div class="accordion-body">
+                                    <span>Usage Examples:</span> <br />
+                                    <span class="examples">
+                                        
+                                            .poll question|option|option|option|time=inseconds<br>Options can be upto 9.<br>The | symbol seperates the question and options are time. Use it like given above. 
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    </div>
+        
+                    <!--giveaway-->
+                    <div class="commands-section" id="Category6">
+
+                    <div class="accordion accordion-flush mt-2" id="giveaway">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fgiveaway">
+                                     .giveaway&nbsp; <span class="command-descreption">Start a giveaway </span>
+                                </button>
+                            </h2>
+                            <div id="fgiveaway" class="accordion-collapse collapse" data-bs-parent="#giveaway">
+                                <div class="accordion-body">
+                                    <span>Usage Examples:</span> <br />
+                                    <span class="examples">
+                                        
+                                            .giveaway
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion accordion-flush mt-2" id="reroll">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#freroll">
+                                     .reroll&nbsp; <span class="command-descreption">Reroll the giveaway for a new winner</span>
+                                </button>
+                            </h2>
+                            <div id="freroll" class="accordion-collapse collapse" data-bs-parent="#reroll">
+                                <div class="accordion-body">
+                                    <span>Usage Examples:</span> <br />
+                                    <span class="examples">
+                                        
+                                            .reroll messageid
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    </div>
+        
+                    <!--covid-->
+                    <div class="commands-section" id="Category7">
+                
+                    <div class="accordion accordion-flush mt-2" id="covid">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fcovid">
+                                    <span class='badge badge-vip rounded-pill'><i class='far fa-crown'></i></span>&nbsp; .covid&nbsp; <span class="command-descreption">Check the covid status of world, continent or a country.</span>
+                                </button>
+                            </h2>
+                            <div id="fcovid" class="accordion-collapse collapse" data-bs-parent="#covid">
+                                <div class="accordion-body">
+                                    <span>Usage Examples:</span> <br />
+                                    <span class="examples">
+                                        
+                                            .covid<br>.covid ContinentName<br>.covid CountryName
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    </div>
+
+                    <!--guild-->
+                    <div class="commands-section" id="Category8">
+            
+                
+                <div class="accordion accordion-flush mt-2" id="getserverinfo">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fgetserverinfo">
+                                 .getserverinfo&nbsp; <span class="command-descreption">Get general information about your guild.</span>
+                            </button>
+                        </h2>
+                        <div id="fgetserverinfo" class="accordion-collapse collapse" data-bs-parent="#getserverinfo">
+                            <div class="accordion-body">
+                                <span>Usage Examples:</span> <br />
+                                <span class="examples">
+                                    
+                                        .getserverinfo
+                                    
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                
+                <div class="accordion accordion-flush mt-2" id="serverpfp">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fserverpfp">
+                                 .serverpfp&nbsp; <span class="command-descreption">Get the guild display picture.</span>
+                            </button>
+                        </h2>
+                        <div id="fserverpfp" class="accordion-collapse collapse" data-bs-parent="#serverpfp">
+                            <div class="accordion-body">
+                                <span>Usage Examples:</span> <br />
+                                <span class="examples">
+                                    
+                                        .serverpfp
+                                    
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                
+                <div class="accordion accordion-flush mt-2" id="showblacklist">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fshowblaklist">
+                                 .showblacklist&nbsp; <span class="command-descreption">Shows the list of blacklisted members in your guild</span>
+                            </button>
+                        </h2>
+                        <div id="fshowblacklist" class="accordion-collapse collapse" data-bs-parent="#showblacklist">
+                            <div class="accordion-body">
+                                <span>Usage Examples:</span> <br />
+                                <span class="examples">
+                                    
+                                        .showblacklist
+                                    
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion accordion-flush mt-2" id="listroles">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#flistroles">
+                                 .listroles&nbsp; <span class="command-descreption">Get a list of all the roles in your guild in the hierarchical order</span>
+                            </button>
+                        </h2>
+                        <div id="flistroles" class="accordion-collapse collapse" data-bs-parent="#listroles">
+                            <div class="accordion-body">
+                                <span>Usage Examples:</span> <br />
+                                <span class="examples">
+                                    
+                                        .listroles
+                                    
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion accordion-flush mt-2" id="bannedlist">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fbannedlist">
+                                 .bannedlist&nbsp; <span class="command-descreption">Shows the list of banned members in your guild</span>
+                            </button>
+                        </h2>
+                        <div id="fbannedlist" class="accordion-collapse collapse" data-bs-parent="#bannedlist">
+                            <div class="accordion-body">
+                                <span>Usage Examples:</span> <br />
+                                <span class="examples">
+                                    
+                                        .bannedlist
+                                    
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion accordion-flush mt-2" id="report">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#freport">
+                                 .report&nbsp; <span class="command-descreption">Shows the list of blacklisted members in your guild</span>
+                            </button>
+                        </h2>
+                        <div id="freport" class="accordion-collapse collapse" data-bs-parent="#report">
+                            <div class="accordion-body">
+                                <span>Usage Examples:</span> <br />
+                                <span class="examples">
+                                    
+                                        .report @member reason
+                                    
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion accordion-flush mt-2" id="suggestion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fsuggestion">
+                                 .suggestion&nbsp; <span class="command-descreption">Give your suggestions</span>
+                            </button>
+                        </h2>
+                        <div id="fsuggestion" class="accordion-collapse collapse" data-bs-parent="#suggestion">
+                            <div class="accordion-body">
+                                <span>Usage Examples:</span> <br />
+                                <span class="examples">
+                                    
+                                        .suggestion message
+                                    
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion accordion-flush mt-2" id="blacklist">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fblacklist">
+                                 .blacklist&nbsp; <span class="command-descreption">Shows the list of blacklisted members in your guild</span>
+                            </button>
+                        </h2>
+                        <div id="fblacklist" class="accordion-collapse collapse" data-bs-parent="#blacklist">
+                            <div class="accordion-body">
+                                <span>Usage Examples:</span> <br />
+                                <span class="examples">
+                                    
+                                        .blacklist option @member<br>Options are Add, Remove<br>.blacklist add @member<br>.blacklist remove @member
+                                    
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion accordion-flush mt-2" id="limitedcommands">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#flimitedcommands">
+                                 .limitedcommands&nbsp; <span class="command-descreption">Shows which command is limited where in your guild</span>
+                            </button>
+                        </h2>
+                        <div id="flimitedcommands" class="accordion-collapse collapse" data-bs-parent="#limitedcommands">
+                            <div class="accordion-body">
+                                <span>Usage Examples:</span> <br />
+                                <span class="examples">
+                                    
+                                        .limitedcommands
+                                    
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            
+                    </div>
+    
+                    <!--fun-->
+                    <div class="commands-section" id="Category9">
+            
+                
+                <div class="accordion accordion-flush mt-2" id="">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f">
+                                 /&nbsp; <span class="command-descreption">- Get your servers s </span>
+                            </button>
+                        </h2>
+                        <div id="f" class="accordion-collapse collapse" data-bs-parent="#">
+                            <div class="accordion-body">
+                                <span>Usage Examples:</span> <br />
+                                <span class="examples">
+                                    
+                                        /
+                                    
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                    </div>
+    
+                    <!--user-->
+                    <div class="commands-section" id="Category10">
+            
+                
+                <div class="accordion accordion-flush mt-2" id="reactionrole">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#freactionrole">
+                                <span class='badge badge-vip rounded-pill'><i class='far fa-crown'></i></span>&nbsp; /reactionrole&nbsp; <span class="command-descreption">- start the setup process for creating a reaction role</span>
+                            </button>
+                        </h2>
+                        <div id="freactionrole" class="accordion-collapse collapse" data-bs-parent="#reactionrole">
+                            <div class="accordion-body">
+                                <span>Usage Examples:</span> <br />
+                                <span class="examples">
+                                    
+                                        /reactionrole
+                                    
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                
+                <div class="accordion accordion-flush mt-2" id="slowmode">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fslowmode">
+                                <span class='badge badge-vip rounded-pill'><i class='far fa-crown'></i></span>&nbsp; /slowmode&nbsp; <span class="command-descreption">- add slowmode for a channel</span>
+                            </button>
+                        </h2>
+                        <div id="fslowmode" class="accordion-collapse collapse" data-bs-parent="#slowmode">
+                            <div class="accordion-body">
+                                <span>Usage Examples:</span> <br />
+                                <span class="examples">
+                                    
+                                        /slowmode :time
+                                    
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                    </div>
+
+                    <!--events-->
+                    <div class="commands-section" id="Category11">
+                    
+                        
+            <div class="accordion accordion-flush mt-2" id="ban">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fban">
+                             /ban&nbsp; <span class="command-descreption">- ban a member</span>
+                        </button>
+                    </h2>
+                    <div id="fban" class="accordion-collapse collapse" data-bs-parent="#ban">
+                        <div class="accordion-body">
+                            <span>Usage Examples:</span> <br />
+                            <span class="examples">
+                                
+                                    /ban @memebr<br>
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="accordion accordion-flush mt-2" id="kick">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fkick">
+                             /kick&nbsp; <span class="command-descreption">- kick a member</span>
+                        </button>
+                    </h2>
+                    <div id="fkick" class="accordion-collapse collapse" data-bs-parent="#kick">
+                        <div class="accordion-body">
+                            <span>Usage Examples:</span> <br />
+                            <span class="examples">
+                                
+                                    /kick @memebr
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="accordion accordion-flush mt-2" id="mute">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fmute">
+                             /mute&nbsp; <span class="command-descreption">- mute a member</span>
+                        </button>
+                    </h2>
+                    <div id="fmute" class="accordion-collapse collapse" data-bs-parent="#mute">
+                        <div class="accordion-body">
+                            <span>Usage Examples:</span> <br />
+                            <span class="examples">
+                                
+                                    /mute @member
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                    </div>
+
+                    <!--music-->
+                    <div class="commands-section" id="Category12">
+        
+            
+            <div class="accordion accordion-flush mt-2" id="help">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fhelp">
+                             /help&nbsp; <span class="command-descreption">- Bot&#39;s help menu</span>
+                        </button>
+                    </h2>
+                    <div id="fhelp" class="accordion-collapse collapse" data-bs-parent="#help">
+                        <div class="accordion-body">
+                            <span>Usage Examples:</span> <br />
+                            <span class="examples">
+                                
+                                    /help<br>/help command:ban
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="accordion accordion-flush mt-2" id="ping">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fping">
+                             /ping&nbsp; <span class="command-descreption">- Get bot&#39;s host server status &amp; latency</span>
+                        </button>
+                    </h2>
+                    <div id="fping" class="accordion-collapse collapse" data-bs-parent="#ping">
+                        <div class="accordion-body">
+                            <span>Usage Examples:</span> <br />
+                            <span class="examples">
+                                
+                                    /ping
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="accordion accordion-flush mt-2" id="invite">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#finvite">
+                             /invite&nbsp; <span class="command-descreption">- Invite bot to your server</span>
+                        </button>
+                    </h2>
+                    <div id="finvite" class="accordion-collapse collapse" data-bs-parent="#invite">
+                        <div class="accordion-body">
+                            <span>Usage Examples:</span> <br />
+                            <span class="examples">
+                                
+                                    /invite
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+                    </div>
+
+                    <!--logger-->
+                    <div class="commands-section" id="Category13">
+        
+            
+            <div class="accordion accordion-flush mt-2" id="">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f">
+                             /&nbsp; <span class="command-descreption">- Get your servers s </span>
+                        </button>
+                    </h2>
+                    <div id="f" class="accordion-collapse collapse" data-bs-parent="#">
+                        <div class="accordion-body">
+                            <span>Usage Examples:</span> <br />
+                            <span class="examples">
+                                
+                                    /
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+                    </div>
+
+                    <!--welcome-->
+                    <div class="commands-section" id="Category14">
+        
+            
+            <div class="accordion accordion-flush mt-2" id="reactionrole">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#freactionrole">
+                            <span class='badge badge-vip rounded-pill'><i class='far fa-crown'></i></span>&nbsp; /reactionrole&nbsp; <span class="command-descreption">- start the setup process for creating a reaction role</span>
+                        </button>
+                    </h2>
+                    <div id="freactionrole" class="accordion-collapse collapse" data-bs-parent="#reactionrole">
+                        <div class="accordion-body">
+                            <span>Usage Examples:</span> <br />
+                            <span class="examples">
+                                
+                                    /reactionrole
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="accordion accordion-flush mt-2" id="slowmode">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fslowmode">
+                            <span class='badge badge-vip rounded-pill'><i class='far fa-crown'></i></span>&nbsp; /slowmode&nbsp; <span class="command-descreption">- add slowmode for a channel</span>
+                        </button>
+                    </h2>
+                    <div id="fslowmode" class="accordion-collapse collapse" data-bs-parent="#slowmode">
+                        <div class="accordion-body">
+                            <span>Usage Examples:</span> <br />
+                            <span class="examples">
+                                
+                                    /slowmode :time
+                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+                    </div>       
+                    <!--youtube-->             
+                    <div class="commands-section" id="Category15">
+                    
+                        
+        <div class="accordion accordion-flush mt-2" id="ban">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fban">
+                         /ban&nbsp; <span class="command-descreption">- ban a member</span>
+                    </button>
+                </h2>
+                <div id="fban" class="accordion-collapse collapse" data-bs-parent="#ban">
+                    <div class="accordion-body">
+                        <span>Usage Examples:</span> <br />
+                        <span class="examples">
+                            
+                                /ban @memebr<br>
+                            
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+        <div class="accordion accordion-flush mt-2" id="kick">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fkick">
+                         /kick&nbsp; <span class="command-descreption">- kick a member</span>
+                    </button>
+                </h2>
+                <div id="fkick" class="accordion-collapse collapse" data-bs-parent="#kick">
+                    <div class="accordion-body">
+                        <span>Usage Examples:</span> <br />
+                        <span class="examples">
+                            
+                                /kick @memebr
+                            
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+        <div class="accordion accordion-flush mt-2" id="mute">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fmute">
+                         /mute&nbsp; <span class="command-descreption">- mute a member</span>
+                    </button>
+                </h2>
+                <div id="fmute" class="accordion-collapse collapse" data-bs-parent="#mute">
+                    <div class="accordion-body">
+                        <span>Usage Examples:</span> <br />
+                        <span class="examples">
+                            
+                                /mute @member
+                            
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                    </div>
+            </div>
+    </div>
+</div>
+
+        <!-- footer -->
+
+        <div class="footer-clean bg-dark">
+            <footer>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-4 col-md-3 item">
+                            <h3>Quick access</h3>
+                            <ul>
+                                <li><a href="#Features">Features</a></li>
+                                <li><a href="#Statics">Statics</a></li>
+                                <li><a href="#FAQ">Ask me</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 col-md-3 item">
+                            <h3>About</h3>
+                            <ul>
+                                <li><a href="./pages/commands.html">Commands</a></li>
+                                <li><a href="#">Team</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 col-md-3 item">
+                            <h3>Links</h3>
+                            <ul>
+                                <li><a href="#">Support server</a></li>
+                                <li><a href="#">Invite bot</a></li>
+                                <li><a href="#">Github</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 item social"><a href="#"><ion-icon name="logo-discord"></ion-icon></a><a href="#"><ion-icon name="logo-facebook"></ion-icon></a><a href="#"><ion-icon name="logo-twitter"></ion-icon></a><a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                            <p class="copyright">MecHaNiC © 2022</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-footer font-small text-light mt-5">
+                <div class="footer-copyright text-center">Made with 💖 by
+                    <a href="https://github.com/ecrpgbot1">Endomorph</a>
+                    © 2022 Copyright
+                  </div>
+                </div>
+            </footer>
+        </div>
+    
+    <input id="commands" value="[{&#34;title&#34;:&#34;&lt;i class=&#39;fas fa-gift ttt&#39;&gt;&lt;/i&gt;&amp;nbsp; Bot Information Commands&#34;,&#34;commands&#34;:[&#34;botinfo&#34;,&#34;support&#34;,&#34;website&#34;,&#34;botguilds&#34;,&#34;commandaliases&#34;,&#34;totalcommands&#34;]},{&#34;title&#34;:&#34;&lt;i class=&#39;fas fa-globe-europe ttt&#39;&gt;&lt;/i&gt;&amp;nbsp;Bot Setup Commands&#34;,&#34;commands&#34;:[&#34;setchannel&#34;,&#34;removechannel&#34;,&#34;mychannels&#34;,&#34;guildtogglecategory&#34;]},{&#34;title&#34;:&#34;&lt;i class=&#39;fas fa-hammer-war ttt&#39;&gt;&lt;/i&gt;&amp;nbsp;&amp;nbsp; SAMP Commands&#34;,&#34;commands&#34;:[&#34;addsever&#34;,&#34;removeserver&#34;,&#34;notificationsettings&#34;,&#34;listplayers&#34;,&#34;sampserverinfo&#34;,&#34;server&#34;,&#34;listserver&#34;,&#34;banktimestats&#34;]},{&#34;title&#34;:&#34;&lt;i class=&#39;fas fas fa-crown ttt&#39;&gt;&lt;/i&gt;&amp;nbsp; Premium Commands&#34;,&#34;commands&#34;:[&#34;reactionrole&#34;,&#34;slowmode&#34;]}]" hidden />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- <script src="/fontawesome/all.min.js"></script> -->
+    <!-- <script src="/js/animation.js"></script> -->
+    <script>
+        function active(elm){
+            document.getElementById("CategoryBtnAll").classList.remove("active");
+            
+                document.getElementById("CategoryBtn0").classList.remove("active");
+                document.getElementById("Category0").setAttribute("hidden", "");
+            
+                document.getElementById("CategoryBtn1").classList.remove("active");
+                document.getElementById("Category1").setAttribute("hidden", "");
+            
+                document.getElementById("CategoryBtn2").classList.remove("active");
+                document.getElementById("Category2").setAttribute("hidden", "");
+            
+                document.getElementById("CategoryBtn3").classList.remove("active");
+                document.getElementById("Category3").setAttribute("hidden", "");
+
+                document.getElementById("CategoryBtn4").classList.remove("active");
+                document.getElementById("Category4").setAttribute("hidden", "");
+
+                document.getElementById("CategoryBtn5").classList.remove("active");
+                document.getElementById("Category5").setAttribute("hidden", "");
+
+                document.getElementById("CategoryBtn6").classList.remove("active");
+                document.getElementById("Category6").setAttribute("hidden", "");
+
+                document.getElementById("CategoryBtn7").classList.remove("active");
+                document.getElementById("Category7").setAttribute("hidden", "");
+
+                document.getElementById("CategoryBtn8").classList.remove("active");
+                document.getElementById("Category8").setAttribute("hidden", "");
+
+                document.getElementById("CategoryBtn9").classList.remove("active");
+                document.getElementById("Category9").setAttribute("hidden", "");
+
+                document.getElementById("CategoryBtn10").classList.remove("active");
+                document.getElementById("Category10").setAttribute("hidden", "");
+
+                document.getElementById("CategoryBtn11").classList.remove("active");
+                document.getElementById("Category11").setAttribute("hidden", "");
+
+                document.getElementById("CategoryBtn12").classList.remove("active");
+                document.getElementById("Category12").setAttribute("hidden", "");
+
+                document.getElementById("CategoryBtn13").classList.remove("active");
+                document.getElementById("Category13").setAttribute("hidden", "");
+
+                document.getElementById("CategoryBtn14").classList.remove("active");
+                document.getElementById("Category14").setAttribute("hidden", "");
+
+            elm.classList.add("active");
+            if(elm.id.replace("CategoryBtn", "") == "All"){
+                
+                    document.getElementById("Category0").removeAttribute("hidden");
+                
+                    document.getElementById("Category1").removeAttribute("hidden");
+                
+                    document.getElementById("Category2").removeAttribute("hidden");
+                
+                    document.getElementById("Category3").removeAttribute("hidden");
+
+                    document.getElementById("Category4").removeAttribute("hidden");
+
+                    document.getElementById("Category5").removeAttribute("hidden");
+
+                    document.getElementById("Category6").removeAttribute("hidden");
+
+                    document.getElementById("Category7").removeAttribute("hidden");
+
+                    document.getElementById("Category8").removeAttribute("hidden");
+
+                    document.getElementById("Category9").removeAttribute("hidden");
+
+                    document.getElementById("Category10").removeAttribute("hidden");
+
+                    document.getElementById("Category11").removeAttribute("hidden");
+
+                    document.getElementById("Category12").removeAttribute("hidden");
+
+                    document.getElementById("Category13").removeAttribute("hidden");
+
+                    document.getElementById("Category14").removeAttribute("hidden");
+            }else{
+                document.getElementById("Category" + elm.id.replace("CategoryBtn", "")).removeAttribute("hidden");
+            }
+        }
+        document.getElementById("CategoryBtnAll").click();
+        function search(arg){
+            let commands = JSON.parse(document.getElementById("commands").value);
+            let cmds = [];
+            commands.forEach(category => {
+                category.commands.forEach(command => {
+                    cmds.push(command);
+                })
+            })
+            let existedCmds = cmds.filter(obj => obj.includes(arg.toLowerCase()));
+            cmds.forEach(cmd => {
+                document.getElementById(cmd).setAttribute("hidden", "");
+            })
+            existedCmds.forEach(cmd => {
+                document.getElementById(cmd).removeAttribute("hidden");
+            })
+        }
+    </script>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+
+</html>

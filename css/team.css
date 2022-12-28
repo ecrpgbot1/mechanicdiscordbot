@@ -1,0 +1,91 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.container h1 {
+	color: #45eaa8ff;
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.container h1::after {
+	content: "";
+	display: block;
+	border-bottom: 3px solid #2fcdd0ff;
+	transform: scaleX(0);
+	transition: transform 0.3s ease-in-out;
+}
+
+.container h1:hover::after {
+	transform: scaleX(1);
+}
+
+.grid-container {
+	margin: 5rem 10rem;
+	display: inline-grid;
+	grid-template-columns: 20rem 20rem;
+	grid-template-rows: 28rem;
+	grid-gap: 4rem;
+}
+
+.grid-item {
+	display: flex;
+	flex-direction: column;
+	background-color: #fabf37ff;
+	border-radius: 28px;
+	align-items: center;
+	color: #252132ff;
+	padding: 2rem;
+	box-shadow: 0px 0px 10px 5px rgba(250, 191, 55);
+}
+
+.grid-item img {
+	width: 10rem;
+	height: 10rem;
+	border-radius: 50%;
+	margin-bottom: 1rem;
+	object-fit: cover;
+}
+
+.name {
+	font-size: 2rem;
+	font-weight: bold;
+	padding: 0.3rem;
+	border-bottom: 3px solid #252132ff;
+}
+
+.title {
+	font-size: 1rem;
+	margin-bottom: 3rem;
+}
+
+.developer .title::after {
+	content: "Developer";
+}
+
+.link a {
+	text-decoration: none;
+	font-size: 1.5rem;
+	background-color: #252132ff;
+	padding: 0.7rem 1rem;
+	margin: 0 .3rem;
+	border-radius: 28px;
+	transition: 0.5s;
+	color: #ffffffff;
+}
+
+.link a:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+	color: #252132ff;
+	box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.footer {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+}
