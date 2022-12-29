@@ -212,7 +212,7 @@
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="flush-headingOne">
                                         <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#ftotalcommands">
-                                             .totalcommands&nbsp; <span class="command-descreption">- get a count of Total number of commands that the bot has.</span>
+                                             .totalcommands&nbsp; <span class="command-descreption">- Get a count of Total number of commands that the bot has.</span>
                                         </button>
                                     </h2>
                                     <div id="ftotalcommands" class="accordion-collapse collapse" data-bs-parent="#totalcommands">
@@ -377,49 +377,49 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion accordion-flush mt-2" id="">
+                        <div class="accordion accordion-flush mt-2" id="listplayers">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="flush-headingOne">
-                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f">
-                                         .listplayers&nbsp; <span class="command-descreption">- Add a server to the list. This will overwrite if there are servers with same name.<br></br>*PERM_NEEDED = MANAGE_MESSAGES* </span>
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#flistplayers">
+                                         .listplayers&nbsp; <span class="command-descreption">- List players ingame in the SAMP server. </span>
                                     </button>
                                 </h2>
-                                <div id="f" class="accordion-collapse collapse" data-bs-parent="#">
+                                <div id="flistplayers" class="accordion-collapse collapse" data-bs-parent="#listplayers">
                                     <div class="accordion-body">
                                         <span>Usage Examples:</span> <br />
                                         <span class="examples">
                                             
-                                                .addserver address page<br></br>.addserver 192.186.244.3 7777<br></br>.addserver serveraddress 7777
+                                                .listplayers index
                                             
                                         </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion accordion-flush mt-2" id="">
+                        <div class="accordion accordion-flush mt-2" id="sampserverinfo">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="flush-headingOne">
-                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f">
-                                         .sampserverinfo&nbsp; <span class="command-descreption">- Add a server to the list. This will overwrite if there are servers with same name.<br></br>*PERM_NEEDED = MANAGE_MESSAGES* </span>
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fsampserverinfo">
+                                         .sampserverinfo&nbsp; <span class="command-descreption">- Get information on the SAMP server using its IP address. </span>
                                     </button>
                                 </h2>
-                                <div id="f" class="accordion-collapse collapse" data-bs-parent="#">
+                                <div id="fsampserverinfo" class="accordion-collapse collapse" data-bs-parent="#">
                                     <div class="accordion-body">
                                         <span>Usage Examples:</span> <br />
                                         <span class="examples">
                                             
-                                                .addserver address page<br></br>.addserver 192.186.244.3 7777<br></br>.addserver serveraddress 7777
+                                                .sampserverinfo address port<br></br>.samserverinfoserver 192.186.244.3 7777<br></br>.samserverinfo serveraddress 7777
                                             
                                         </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion accordion-flush mt-2" id="">
+                        <div class="accordion accordion-flush mt-2" id="server">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="flush-headingOne">
-                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f">
-                                         .server&nbsp; <span class="command-descreption">- Add a server to the list. This will overwrite if there are servers with same name.<br></br>*PERM_NEEDED = MANAGE_MESSAGES* </span>
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fserver">
+                                         .server&nbsp; <span class="command-descreption">- Get samp server info using the index </span>
                                     </button>
                                 </h2>
                                 <div id="f" class="accordion-collapse collapse" data-bs-parent="#">
@@ -427,45 +427,45 @@
                                         <span>Usage Examples:</span> <br />
                                         <span class="examples">
                                             
-                                                .addserver address page<br></br>.addserver 192.186.244.3 7777<br></br>.addserver serveraddress 7777
+                                                .server index<br></br>.server 1<br>(Use <mark>.listserver</mark>) command to find the index of the server. 
                                             
                                         </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion accordion-flush mt-2" id="">
+                        <div class="accordion accordion-flush mt-2" id="listserver">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="flush-headingOne">
-                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f">
-                                         .listserver&nbsp; <span class="command-descreption">- Add a server to the list. This will overwrite if there are servers with same name.<br></br>*PERM_NEEDED = MANAGE_MESSAGES* </span>
+                                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#flistserver">
+                                         .listserver&nbsp; <span class="command-descreption">- Lists the SAMP server added in your guild</span>
                                     </button>
                                 </h2>
-                                <div id="f" class="accordion-collapse collapse" data-bs-parent="#">
+                                <div id="flistserver" class="accordion-collapse collapse" data-bs-parent="#listserver">
                                     <div class="accordion-body">
                                         <span>Usage Examples:</span> <br />
                                         <span class="examples">
                                             
-                                                .addserver address page<br></br>.addserver 192.186.244.3 7777<br></br>.addserver serveraddress 7777
+                                                .listserver
                                             
                                         </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion accordion-flush mt-2" id="">
+                        <div class="accordion accordion-flush mt-2" id="banktimestats">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="flush-headingOne">
                                     <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f">
-                                         .banktimestats&nbsp; <span class="command-descreption">- Add a server to the list. This will overwrite if there are servers with same name.<br></br>*PERM_NEEDED = MANAGE_MESSAGES* </span>
+                                         .banktimestats&nbsp; <span class="command-descreption">- Show the no. of times the bank notifications has been sent for East Coast RPG SAMP server </span>
                                     </button>
                                 </h2>
-                                <div id="f" class="accordion-collapse collapse" data-bs-parent="#">
+                                <div id="fbanktimestats" class="accordion-collapse collapse" data-bs-parent="#banktimestats">
                                     <div class="accordion-body">
                                         <span>Usage Examples:</span> <br />
                                         <span class="examples">
                                             
-                                                .addserver address page<br></br>.addserver 192.186.244.3 7777<br></br>.addserver serveraddress 7777
+                                                .banktimestats
                                             
                                         </span>
                                     </div>
@@ -523,7 +523,7 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="flush-headingOne">
                                     <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#factiveauctions">
-                                        <span class='badge badge-vip rounded-pill'><i class='far fa-crown'></i></span>&nbsp; .activeauctions&nbsp; <span class="command-descreption">Place your bids.</span>
+                                        <span class='badge badge-vip rounded-pill'><i class='far fa-crown'></i></span>&nbsp; .activeauctions&nbsp; <span class="command-descreption">Shows the active auctions from your guild.</span>
                                     </button>
                                 </h2>
                                 <div id="factiveauctions" class="accordion-collapse collapse" data-bs-parent="#activeauctions">
@@ -531,7 +531,7 @@
                                         <span>Usage Examples:</span> <br />
                                         <span class="examples">
                                             
-                                            .activeauctions auctionid amount
+                                            .activeauctions
                                             
                                         </span>
                                     </div>
@@ -568,7 +568,7 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingOne">
                                 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fban">
-                                     .ban&nbsp; <span class="command-descreption">- ban a member<br>*PERM_NEEDED = BAN_MEMBERS*</span>
+                                     .ban&nbsp; <span class="command-descreption">- Ban a member<br>*PERM_NEEDED = BAN_MEMBERS*</span>
                                 </button>
                             </h2>
                             <div id="fban" class="accordion-collapse collapse" data-bs-parent="#ban">
@@ -608,7 +608,7 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingOne">
                                 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fkick">
-                                     .kick&nbsp; <span class="command-descreption">- kick a member<br>*PERM_NEEDED = KICK_MEMBERS*</span>
+                                     .kick&nbsp; <span class="command-descreption">- Kick a member<br>*PERM_NEEDED = KICK_MEMBERS*</span>
                                 </button>
                             </h2>
                             <div id="fkick" class="accordion-collapse collapse" data-bs-parent="#kick">
@@ -629,7 +629,7 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingOne">
                                 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fmute">
-                                     .mute&nbsp; <span class="command-descreption">- mute a member<br>*PERM_NEEDED = MANAGE_MESSAGES*</span>
+                                     .mute&nbsp; <span class="command-descreption">- Mute a member<br>*PERM_NEEDED = MANAGE_MESSAGES*</span>
                                 </button>
                             </h2>
                             <div id="fmute" class="accordion-collapse collapse" data-bs-parent="#mute">
@@ -686,7 +686,7 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingOne">
                                 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fpurge">
-                                     .purge&nbsp; <span class="command-descreption">- delete a set of messages in a channel<br>*PERM_NEEDED = MANAGE_MESSAGES*</span>
+                                     .purge&nbsp; <span class="command-descreption">- Delete a set of messages in a channel<br>*PERM_NEEDED = MANAGE_MESSAGES*</span>
                                 </button>
                             </h2>
                             <div id="fpurge" class="accordion-collapse collapse" data-bs-parent="#purge">
@@ -791,7 +791,7 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="flush-headingOne">
                                 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#flimit">
-                                     .limit&nbsp; <span class="command-descreption">imit a command usage to a specific channel(s)</span>
+                                     .limit&nbsp; <span class="command-descreption">- Limit a command usage to a specific channel(s)</span>
                                 </button>
                             </h2>
                             <div id="flimit" class="accordion-collapse collapse" data-bs-parent="#limit">
@@ -818,7 +818,7 @@
                                     <span>Usage Examples:</span> <br />
                                     <span class="examples">
                                         
-                                            .perms @user/@role
+                                            .perms @user<br>/perms @role
                                         
                                     </span>
                                 </div>
