@@ -1,8 +1,8 @@
-.container {
+/* .container {
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
-}
+} */
 
 .container h1 {
 	color: #45eaa8ff;

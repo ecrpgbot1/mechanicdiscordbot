@@ -58,9 +58,9 @@
   opacity:0.6;
 }
 hr {
-  border: 1px solid aqua;
+  border: 2px solid aqua;
   margin: 1rem;
-  opacity: .25;
+  opacity: .50;
 }
 .card {
   background-color: #2b2d30;

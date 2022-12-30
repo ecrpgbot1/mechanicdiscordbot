@@ -1,8 +1,8 @@
-.container {
+/* .container {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-}
+	align-items: left;
+} */
 
 .container h1 {
 	color: #45eaa8ff;
@@ -10,6 +10,7 @@
 	text-transform: uppercase;
 	font-size: 3rem;
 	margin-bottom: 1rem;
+	text-align: center;
 }
 
 .container h1::after {
