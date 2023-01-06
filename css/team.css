@@ -36,12 +36,12 @@
 .grid-item {
 	display: flex;
 	flex-direction: column;
-	background-color: #fabf37ff;
+	background-color: rgb(174, 49, 223);
 	border-radius: 28px;
 	align-items: center;
 	color: #252132ff;
 	padding: 2rem;
-	box-shadow: 0px 0px 10px 5px rgba(250, 191, 55);
+	box-shadow: 0px 0px 10px 5px rgb(120, 248, 231);
 }
 
 .grid-item img {
