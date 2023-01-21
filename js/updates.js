@@ -44,7 +44,7 @@ function create_updates(update_contents) {
 }
 
 function get_updates() {
-	url = "https://utsavgurmachhan.com.np/mechanic/updates/";
+	url = "https://ryuuzu.xyz/mechanic/updates/";
 	fetch(url)
 		.then((response) => response.json())
 		.then((data) => {
